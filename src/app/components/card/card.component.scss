@@ -1,0 +1,42 @@
+section {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 50% 50%;
+
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 100%;
+
+  }
+}
+
+.card {
+  background-color: #111;
+  border-radius: 12px;
+  height: 380px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  transform: scale(.9);
+  transition: all .2s ease;
+  cursor: pointer;
+  h1 {
+    text-transform: capitalize;
+  }
+  h1,
+  p {
+    color: #fff;
+  }
+  &:hover {
+    transform: scale(1);
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.567);
+  }
+}

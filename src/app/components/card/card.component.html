@@ -1,0 +1,8 @@
+<section class="container">
+  <span *ngIf="loading">Loading...</span>
+  <div class="card" *ngFor="let card of data">
+    <h1>{{card.title}}</h1>
+    <p *ngIf="card.completed">🟢</p>
+    <p *ngIf="!card.completed">🔴</p>
+  </div>
+</section>
